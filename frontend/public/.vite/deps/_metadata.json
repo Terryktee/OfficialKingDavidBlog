@@ -1,0 +1,61 @@
+{
+  "hash": "d3306c5a",
+  "configHash": "fb9d4d8d",
+  "lockfileHash": "2b26ec8d",
+  "browserHash": "5e47cb78",
+  "optimized": {
+    "react": {
+      "src": "../../react/index.js",
+      "file": "react.js",
+      "fileHash": "1633100e",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "da6fee55",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "c58bd870",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "92c768f5",
+      "needsInterop": true
+    },
+    "autoprefixer": {
+      "src": "../../autoprefixer/lib/autoprefixer.js",
+      "file": "autoprefixer.js",
+      "fileHash": "d518633d",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "1415849d",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../axios/index.js",
+      "file": "axios.js",
+      "fileHash": "44008bc3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XBHG3ID7": {
+      "file": "chunk-XBHG3ID7.js"
+    },
+    "chunk-YSDLPTTY": {
+      "file": "chunk-YSDLPTTY.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}
