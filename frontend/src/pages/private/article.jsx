@@ -27,7 +27,7 @@ const PostDetail = () => {
 
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/private/posts/${id}/`, {
+        const response = await axios.get(`https://terryktee.pythonanywhere.com/private/posts/${id}/`, {
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers
           }
@@ -52,7 +52,7 @@ const PostDetail = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:8000/private/posts/${id}/`, {
+      await axios.delete(`https://terryktee.pythonanywhere.com/private/posts/${id}/`, {
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
           'X-CSRFToken': csrfToken,

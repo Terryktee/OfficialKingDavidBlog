@@ -34,7 +34,7 @@ const UpdatePost = () => {
     useEffect(() => {
         const fetchPost = async () => {
           try {
-            const response = await axios.get(`http://localhost:8000/private/posts/${id}/`);
+            const response = await axios.get(`https://terryktee.pythonanywhere.com/private/posts/${id}/`);
             setTitle(response.data.title);
             setBody(response.data.body);
             setImage(response.data.image);
@@ -96,7 +96,7 @@ const UpdatePost = () => {
         }
 
         try {
-            const response = await axios.patch(`http://localhost:8000/private/posts/${id}/`, formData, {
+            const response = await axios.patch(`https://terryktee.pythonanywhere.com/private/posts/${id}/`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`,

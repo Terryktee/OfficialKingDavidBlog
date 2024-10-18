@@ -19,7 +19,7 @@ export default function ManagePost() {
 
         const fetchPosts = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/private/posts/', {
+                const response = await axios.get('https://terryktee.pythonanywhere.com/private/posts/', {
                     headers: {
                         'Authorization': `Bearer ${token}`, // Include the token in the headers
                     }

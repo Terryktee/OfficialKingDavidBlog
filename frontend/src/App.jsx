@@ -7,11 +7,13 @@ import Latest_articles from "./components/latest_articles"
 import About from "./components/about"
 import Articles from "./components/articles"
 import Footer from "./components/footer";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
   return (
     <>
+    <Analytics />
     <Navbar/>
     <div className="lg:flex lg:justify-between lg:space-x-4 lg:space-y-4 ">
         <SideContent/>

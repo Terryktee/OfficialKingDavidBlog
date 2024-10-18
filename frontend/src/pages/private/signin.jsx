@@ -17,7 +17,7 @@ export default function SignIn() {
         //const csrfToken = getCsrfToken(); // Get CSRF token from cookies
 
         try {
-            const response = await axios.post('http://localhost:8000/api/token/', {
+            const response = await axios.post('https://terryktee.pythonanywhere.com/api/token/', {
                 username: username,
                 password: password,
         },

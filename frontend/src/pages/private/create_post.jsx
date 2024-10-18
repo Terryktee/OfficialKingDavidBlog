@@ -70,7 +70,7 @@ const CreatePost = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8000/private/posts/', formData, {
+            const response = await axios.post('https://terryktee.pythonanywhere.com/private/posts/', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`,

@@ -6,7 +6,7 @@ export default function latest_articles() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/posts/')
+        axios.get('https://terryktee.pythonanywhere.com/api/posts/')
             .then(response => {
                 setPosts(response.data);
                 console.log(response.data);

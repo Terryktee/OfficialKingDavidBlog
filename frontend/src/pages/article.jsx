@@ -16,7 +16,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/posts/${slug}/`);
+        const response = await axios.get(`https://terryktee.pythonanywhere.com/api/posts/${slug}/`);
         setPost(response.data);
       } catch (err) {
         setError('Post not found');
