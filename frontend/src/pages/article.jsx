@@ -5,7 +5,7 @@ import markdownit from 'markdown-it';
 import Navbar from '../components/navbar';
 import '../style.css';
 import Footer from "../components/footer"
-
+import { Helmet } from 'react-helmet-async';
 const md = new markdownit();
 
 const articleDetail = () => {
