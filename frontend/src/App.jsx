@@ -8,7 +8,7 @@ import About from "./components/about"
 import Articles from "./components/articles"
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react"
-
+import { Helmet } from 'react-helmet-async';
 function App() {
 
   return (
