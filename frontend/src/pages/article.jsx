@@ -8,21 +8,21 @@ import Footer from "../components/footer"
 
 const md = new markdownit();
 
-const PostDetail = () => {
+const articleDetail = () => {
   const { slug } = useParams();
-  const [post, setPost] = useState(null);
+  const [article, setArticle] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchPost = async () => {
+    const fetcharticle = async () => {
       try {
         const response = await axios.get(`https://terryktee.pythonanywhere.com/api/posts/${slug}/`);
-        setPost(response.data);
+        setArticle(response.data);
       } catch (err) {
-        setError('Post not found');
+        setError('article not found');
       }
     };
-    fetchPost();
+    fetcharticle();
   }, [slug]);
 
   if (error) return <div className="flex flex-col items-center justify-center h-screen bg-black text-white p-4 rounded-lg shadow-md">
@@ -31,17 +31,27 @@ const PostDetail = () => {
     <p>Please refresh the page; it might be a server issue.</p>
   </div>;
 
-  if (!post) return <div className="flex items-center justify-center h-screen"><div className="animate-pulse">
+  if (!article) return <div className="flex items-center justify-center h-screen"><div className="animate-pulse">
     Loading...
   </div>
   </div>;
 
 
   // Convert Markdown to HTML
-  const htmlContent = md.render(post.body);
+  const htmlContent = md.render(article.body);
 
   return (
     <>
+    <Helmet>
+        <title>{`${article.title} - Official King David Blog`}</title>
+        <meta name="description" content={article.description} />
+        <meta name="keywords" content={article.keywords} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={article.description} />
+        <meta property="og:image" content={article.image} />
+        <meta property="og:url" content={`https://officialkingdavid.vercel.app/articles/${slug}`} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <Navbar />
       <div className="relative w-full max-w-7xl px-4 sm:px-8 lg:px-12 mx-auto py-10 md:py-10 max-w-screen-md">
         <article>
@@ -50,7 +60,7 @@ const PostDetail = () => {
               <img src="https://www.profile.myself"  alt= "profile" height="50" width="50" loading="lazy" className="rounded-full mr-2 h-10 w-10 md:h-12 md:w-12"></img>
               <a href="#" className="text-sm md:text-base block leading-none">
                 By
-                <span className="hover:underline cursor-pointer font-medium"> {post.author}</span> <br />
+                <span className="hover:underline cursor-pointer font-medium"> {article.author}</span> <br />
                 <span className="text-xs md:text-sm"> Blogger , Writer</span>
               </a>
             </div>
@@ -63,7 +73,7 @@ const PostDetail = () => {
               </div>
               <div className="flex items-center gap-2 text-sm md:text-base font-medium">
                 <time dateTime="2024-08-09 14:19:54" className="flex items-center text-zinc-600">
-                  <span>{post.publish}</span>
+                  <span>{article.publish}</span>
                   <span className="h-4 w-0.5 rounded-full bg-zinc-300"></span>
                 </time>
                 <span className="h-4 w-0.5 rounded-full bg-zinc-300"></span>
@@ -83,7 +93,7 @@ const PostDetail = () => {
   );
 };
 
-export default PostDetail;
+export default articleDetail;
 
 
 
