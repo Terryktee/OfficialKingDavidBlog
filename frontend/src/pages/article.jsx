@@ -36,13 +36,14 @@ const articleDetail = () => {
   </div>
   </div>;
 
-
+   //Url Image fallback
+   const imageUrl = article.image || 'https://upload.wikimedia.org/wikipedia/commons/3/31/Blogger.svg';
   // Convert Markdown to HTML
   const htmlContent = md.render(article.body);
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>{`${article.title} - Official King David Blog`}</title>
         <meta name="description" content={article.description} />
         <meta name="keywords" content={article.keywords} />
@@ -57,7 +58,7 @@ const articleDetail = () => {
         <article>
           <header className="mb-8 flex flex-col">
             <div className="flex flex-row items-center mr-2 h-fit mb-6">
-              <img src="https://www.profile.myself"  alt= "profile" height="50" width="50" loading="lazy" className="rounded-full mr-2 h-10 w-10 md:h-12 md:w-12"></img>
+              <img src="https://www.profile.myself" alt="profile" height="50" width="50" loading="lazy" className="rounded-full mr-2 h-10 w-10 md:h-12 md:w-12"></img>
               <a href="#" className="text-sm md:text-base block leading-none">
                 By
                 <span className="hover:underline cursor-pointer font-medium"> {article.author}</span> <br />
@@ -87,6 +88,15 @@ const articleDetail = () => {
           </header>
         </article>
         <div className="markdown" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-1522586714025957"
+          data-ad-slot="8204985236"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({ });
+        </script>
       </div>
       <Footer />
     </>

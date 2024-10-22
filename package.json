@@ -2,13 +2,14 @@
   "name": "simbayi-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"No tests specified\" && exit 1"
-  }
-  ,
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react-share": "^5.1.0"
+  }
 }
