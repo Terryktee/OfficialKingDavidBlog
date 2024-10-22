@@ -124,15 +124,7 @@ const articleDetail = () => {
           </header>
         </article>
         <div className="markdown" dangerouslySetInnerHTML={{ __html: htmlContent }} />
-        <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-1522586714025957"
-          data-ad-slot="8204985236"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({ });
-        </script>
+        
       </div>
       <Footer />
     </>
