@@ -21,7 +21,7 @@ function App() {
         <meta name="author" content="Official King David" />
         <meta property="og:title" content="Articles - Official King David Blog" />
         <meta property="og:description" content="Discover insightful articles and stories on the Official King David Blog." />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/31/Blogger.svg" />
         <meta property="og:url" content="https://officialkingdavid.vercel.app/articles" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
