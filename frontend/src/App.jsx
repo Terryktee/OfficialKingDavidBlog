@@ -15,7 +15,7 @@ const imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/3/31/Blogger.sv
 const blogUrl = 'https://officialkingdavid.vercel.app'; // Update this with your actual blog URL
 
 function App() {
-  const aboutRef = useRef(null); // Ref for smooth scrolling to About section
+  const aboutRef = useRef(null); // Declare aboutRef here
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
@@ -46,7 +46,7 @@ function App() {
         <Sidepost />
       </div>
       <Latest_articles />
-      <div ref={aboutRef}>
+      <div ref={aboutRef}> {/* Ref for smooth scrolling */}
         <About />
       </div>
       <Articles />
