@@ -6,7 +6,7 @@ import Navbar from '../components/navbar';
 import '../style.css';
 import Footer from "../components/footer"
 import { Helmet } from 'react-helmet-async';
-
+import GoogleAds from '../components/google-ads'
 import {
   FacebookIcon,
   FacebookMessengerIcon, 
@@ -124,7 +124,7 @@ const articleDetail = () => {
           </header>
         </article>
         <div className="markdown" dangerouslySetInnerHTML={{ __html: htmlContent }} />
-        
+        <GoogleAds/>
       </div>
       <Footer />
     </>
