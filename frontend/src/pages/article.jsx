@@ -6,6 +6,22 @@ import Navbar from '../components/navbar';
 import '../style.css';
 import Footer from "../components/footer"
 import { Helmet } from 'react-helmet-async';
+
+import {
+  FacebookIcon,
+  FacebookMessengerIcon, 
+  LinkedinIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+  FacebookShareButton, 
+  TwitterShareButton, 
+  LinkedinShareButton,
+  FacebookMessengerShareButton, 
+  TelegramShareButton,
+  WhatsappShareButton,
+
+} from "react-share";
 const md = new markdownit();
 
 const articleDetail = () => {
@@ -38,6 +54,7 @@ const articleDetail = () => {
 
    //Url Image fallback
    const imageUrl = article.image || 'https://upload.wikimedia.org/wikipedia/commons/3/31/Blogger.svg';
+   const shareUrl = `https://officialkingdavid.vercel.app/articles/${slug}`;
   // Convert Markdown to HTML
   const htmlContent = md.render(article.body);
 
@@ -49,7 +66,7 @@ const articleDetail = () => {
         <meta name="keywords" content={article.keywords} />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.description} />
-        <meta property="og:image" content={article.image} />
+        <meta property="og:image" content={imageUrl} />
         <meta property="og:url" content={`https://officialkingdavid.vercel.app/articles/${slug}`} />
         <meta name="robots" content="index, follow" />
       </Helmet>
@@ -82,7 +99,26 @@ const articleDetail = () => {
               </div>
               <div className="flex flex-col mt-6 md:mt-0">
                 <span className="text-xs text-zinc-600 hidden md:block">Share On:</span>
-                <div className="flex justify-between md:gap-6 items-center max-w-[250px]"></div>
+                <div className="flex justify-between md:gap-6 items-center max-w-[250px]">
+                <WhatsappShareButton url={shareUrl}>
+            <WhatsappIcon size={32} round />
+          </WhatsappShareButton>
+          <FacebookShareButton url={shareUrl} quote={article.description}>
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+          <TwitterShareButton url={shareUrl} title={article.title}>
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
+          <LinkedinShareButton url={shareUrl} title={article.title} summary={article.description}>
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+          <FacebookMessengerShareButton url={shareUrl}>
+            <FacebookMessengerIcon size={32} round />
+          </FacebookMessengerShareButton>
+          <TelegramShareButton url={shareUrl} title={article.title}>
+            <TelegramIcon size={32} round />
+          </TelegramShareButton>
+                </div>
               </div>
             </div>
           </header>

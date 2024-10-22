@@ -1,5 +1,10 @@
 function Navbar(){
 
+    const scrollToAbout = () => {
+        if (aboutRef.current) {
+          aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
     return(
         <nav>
             <ul className="md:flex md:justify-between ">
@@ -11,9 +16,11 @@ function Navbar(){
                         
                     ].map(item =>
                     (
-                    <li key={item.id} className="hover:text-center font-bold hover:text-yellow-300  hover:rounded-lg  ">
-                        <a href={item.link}>{item.name}</a>
+                    <ul>
+                        <li key={item.id} className="hover:text-center font-bold hover:text-yellow-300  hover:rounded-lg  ">
+                        <a onClick={scrollToAbout}>{item.name} </a>
                     </li>
+                    </ul>
                     )
                     )
                 }

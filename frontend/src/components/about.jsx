@@ -1,8 +1,9 @@
+import  { useRef } from 'react';
 function About() {
 
     return (
         <>
-            <div className="flex bg-yellow-400 rounded-lg h-full p-4 container mt-4 ">
+            <div ref={aboutRef} className="flex bg-yellow-400 rounded-lg h-full p-4 container mt-4 ">
                 <div>
                     <h1 className="text-2xl font-bold">About Author</h1>
                     <p className="text-wrap">
