@@ -54,7 +54,7 @@ const articleDetail = () => {
 
    //Url Image fallback
    const imageUrl = article.image || 'https://upload.wikimedia.org/wikipedia/commons/3/31/Blogger.svg';
-   const shareUrl = `https://officialkingdavid.vercel.app/articles/${slug}`;
+   const shareUrl = `https://officialkingdavid.vercel.app/article/${slug}`;
   // Convert Markdown to HTML
   const htmlContent = md.render(article.body);
 
