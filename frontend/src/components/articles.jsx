@@ -27,7 +27,7 @@ export default function LatestArticles() {
                                  src={post.image} 
                                  alt={post.title} />
                             <div className="px-3 py-2">
-                                <Link to={`/posts/${post.slug}/`} className="hover:underline hover:text-yellow-400 font-bold">{post.title}</Link>
+                                <Link to={`/article/${post.slug}/`} className="hover:underline hover:text-yellow-400 font-bold">{post.title}</Link>
                                 <div className="mt-6 lg:mt-auto lg:px-3 lg:py-2">
                                     <p className="lg:absolute lg:inset-x-2 lg:bottom-0">By <span className="font-bold">{post.author}</span></p>
                                 </div>
